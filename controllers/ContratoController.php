@@ -53,7 +53,6 @@ class ContratoController
                     $this->contrato->monto_base = $_POST['monto_base'] ?? 0;
                     $this->contrato->monto_hora = null;
                     break;
-                case 'jornalero':
                 case 'catedratico':
                     $this->contrato->monto_base = 0;
                     $this->contrato->monto_hora = $_POST['monto_hora'] ?? 0;
@@ -182,7 +181,7 @@ class ContratoController
                     $this->contrato->monto_base = $_POST['monto_base'] ?? 0;
                     $this->contrato->monto_hora = null;
                     break;
-                case 'jornalero':
+                case 'catedratico':
                     $this->contrato->monto_base = 0;
                     $this->contrato->monto_hora = $_POST['monto_hora'] ?? 0;
                     break;
@@ -376,13 +375,7 @@ public function firmar()
 Queda convenida entre las partes que el Honorario Profesional será:
 - Monto por hora cátedra: Gs $montoHora
 El profesional debe emitir factura contado una vez pagado sus honorarios.
-Se deja constancia que el Profesional no goza del beneficio de la jubilación del I.P.S.";
-        } elseif ($tipo === 'jornalero') {
-            $honorarios = "SEGUNDA - Honorarios Profesionales:
-Queda convenida entre las partes que el Honorario Profesional será:
-- Monto por hora trabajada: Gs $montoHora
-El profesional debe emitir factura contado una vez pagado sus honorarios.
-Se deja constancia que el Profesional goza del beneficio de la jubilación del I.P.S.";
+Se deja constancia que el Profesional no goza I.P.S.";
         } else {
             $honorarios = "SEGUNDA - Honorarios Profesionales:
 Queda convenida entre las partes que el Honorario Profesional será:

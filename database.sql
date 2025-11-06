@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS empleado (
 CREATE TABLE IF NOT EXISTS contrato (
     id_contrato INT AUTO_INCREMENT PRIMARY KEY,
     id_empleado INT NOT NULL,
-    tipo_contrato ENUM('jornalero', 'mensualero', 'catedratico') NOT NULL,
+    tipo_contrato ENUM('mensualero', 'catedratico') NOT NULL,
     fecha_inicio DATE NOT NULL,
     fecha_fin DATE,
     monto_base DECIMAL(10,2) NOT NULL,

@@ -30,7 +30,6 @@ include 'views/templates/header.php';
               <select name="tipo_contrato" id="tipo_contrato" class="form-select" required onchange="toggleCamposContrato(this.value)">
                 <option value="">Seleccione...</option>
                 <option value="mensualero">Mensualero</option>
-                <option value="jornalero">Jornalero</option>
                 <option value="catedratico">Catedrático</option>
               </select>
             </div>
@@ -119,7 +118,7 @@ function toggleCamposContrato(tipo) {
   document.getElementById('campo-monto-base').style.display =
     (tipo === 'mensualero') ? 'block' : 'none';
   document.getElementById('campo-monto-hora').style.display =
-    (tipo === 'jornalero' || tipo === 'catedratico') ? 'block' : 'none';
+    (tipo === 'catedratico') ? 'block' : 'none';
 }
 
 </script>

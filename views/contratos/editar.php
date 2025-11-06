@@ -28,7 +28,6 @@ include 'views/templates/header.php';
             <label class="form-label">Tipo de Contrato</label>
             <select name="tipo_contrato" class="form-select" onchange="toggleCamposContrato(this.value)">
               <option value="mensualero" <?= $contrato['tipo_contrato']=='mensualero'?'selected':'' ?>>Mensualero</option>
-              <option value="jornalero" <?= $contrato['tipo_contrato']=='jornalero'?'selected':'' ?>>Jornalero</option>
               <option value="catedratico" <?= $contrato['tipo_contrato']=='catedratico'?'selected':'' ?>>Catedrático</option>
             </select>
           </div>
@@ -91,9 +90,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
 });
 function toggleCamposContrato(tipo) {
   document.getElementById('campo-monto-base').style.display =
-    (tipo==='mensualero'||tipo==='catedratico')?'block':'none';
+    (tipo==='mensualero')?'block':'none';
   document.getElementById('campo-monto-hora').style.display =
-    (tipo==='jornalero')?'block':'none';
+    (tipo==='catedratico')?'block':'none';
 }
 </script>
 
