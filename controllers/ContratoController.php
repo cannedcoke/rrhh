@@ -381,7 +381,7 @@ Se deja constancia que el Profesional no goza I.P.S.";
 Queda convenida entre las partes que el Honorario Profesional será:
 - Monto base mensual: Gs $montoBase
 El profesional debe emitir factura contado una vez pagado sus honorarios.
-Se deja constancia que el Profesional goza del beneficio de la jubilación del I.P.S.";
+Se deja constancia que el Profesional goza de I.P.S.";
         }
 
         require_once __DIR__ . '/../fpdf.php';
