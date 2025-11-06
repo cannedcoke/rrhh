@@ -388,6 +388,18 @@ Se deja constancia que el Profesional goza de I.P.S.";
         $pdf = new FPDF();
         $pdf->AddPage();
         $pdf->SetAutoPageBreak(true, 20);
+        
+        // === AGREGAR LOGO EN LA PARTE SUPERIOR ===
+        $logoPath = __DIR__ . '/../logo.png';
+        if (file_exists($logoPath)) {
+            // Centrar el logo horizontalmente
+            $pageWidth = $pdf->GetPageWidth();
+            $logoWidth = 50; // Ancho del logo en mm
+            $xPos = ($pageWidth - $logoWidth) / 2;
+            $pdf->Image($logoPath, $xPos, 10, $logoWidth);
+            $pdf->Ln(35); // Espacio después del logo
+        }
+        
         $pdf->SetFont('Arial', '', 12);
 
         $texto = "
